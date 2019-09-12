@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -6,7 +9,7 @@ class App extends React.Component {
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleDeleteOption = this.handleDeleteOption.bind(this);
     this.state = {
-      options: props.options
+      options: []
     }
   }
 
@@ -69,10 +72,6 @@ class App extends React.Component {
     );
   }
 }
-
-App.defaultProps = {
-  options: []
-};
 
 const Header = (props) => {
   return (

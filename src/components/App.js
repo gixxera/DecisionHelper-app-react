@@ -3,11 +3,17 @@ import AddOption from './AddOption';
 import Options from './Options';
 import Action from './Action';
 import Header from './Header';
+import OptionModal from './Modal';
 
 class App extends React.Component {
   state = {
-    options: []
+    options: [],
+    selectedOption: undefined
   };
+
+  handleClearOption = () => {
+    this.setState(() => ({ selectedOption: undefined }));
+  }
 
   handleDeleteOptions = () => {
     this.setState(() => ({ options: [] }));
@@ -22,7 +28,7 @@ class App extends React.Component {
   handlePick = () => {
     const randomIndex = Math.floor(Math.random() * this.state.options.length);
     const option = this.state.options[randomIndex]
-    alert(option);
+    this.setState(() => ({ selectedOption: option }));
   }
 
   handleAddOption = (option) => {
@@ -64,6 +70,7 @@ class App extends React.Component {
         <Action handlePick={this.handlePick} hasOptions={this.state.options.length > 0} />
         <Options handleDeleteOption={this.handleDeleteOption} handleDeleteOptions={this.handleDeleteOptions} options={this.state.options} />
         <AddOption handleAddOption={this.handleAddOption} />
+        <OptionModal selectedOption={this.state.selectedOption} handleClearOption={this.handleClearOption} />
       </div>
     );
   }

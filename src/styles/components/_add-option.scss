@@ -1,0 +1,13 @@
+.add-option {
+  display: flex;
+  padding: 15px;
+}
+
+.add-option__input {
+  flex-grow: 1;
+  margin-right: 5px;
+  background: #565777;
+  border: none;
+  border-bottom: 3px solid darken(#565777, 10%);
+  color: #c9c9c9;
+}

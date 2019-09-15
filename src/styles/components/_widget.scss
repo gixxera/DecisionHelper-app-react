@@ -2,8 +2,12 @@
   background: #4b4a77;
   color: #c9c9c9;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .widget-header__title {

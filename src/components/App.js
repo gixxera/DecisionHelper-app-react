@@ -4,12 +4,23 @@ import Options from './Options';
 import Action from './Action';
 import Header from './Header';
 import OptionModal from './Modal';
+import SearchOption from './SearchOption';
 
 class App extends React.Component {
   state = {
     options: [],
-    selectedOption: undefined
+    selectedOption: undefined,
+    filteredOptions: []
   };
+
+  handleFilterOptions = (e) => {
+    let input = e.target.value;
+    let filters = [];
+    if (input !== '') {
+      filters = this.state.options.filter((option) => option.toLowerCase().includes(input.toLowerCase()));
+    }
+    this.setState(() => ({ filteredOptions: filters }));
+  }
 
   handleClearOption = () => {
     this.setState(() => ({ selectedOption: undefined }));
@@ -69,8 +80,9 @@ class App extends React.Component {
         <Header subtitle={subtitle} />
         <div className="wrapper">
           <Action handlePick={this.handlePick} hasOptions={this.state.options.length > 0} />
+          <SearchOption handleFilterOptions={this.handleFilterOptions} />
           <div className="widget">
-            <Options handleDeleteOption={this.handleDeleteOption} handleDeleteOptions={this.handleDeleteOptions} options={this.state.options} />
+            <Options handleDeleteOption={this.handleDeleteOption} handleDeleteOptions={this.handleDeleteOptions} options={this.state.options} filteredOptions={this.state.filteredOptions} />
             <AddOption handleAddOption={this.handleAddOption} />
           </div>
         </div>

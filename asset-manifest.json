@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/DecisionHelper-app-react/static/css/main.fe703652.chunk.css",
-    "main.js": "/DecisionHelper-app-react/static/js/main.11316a6b.chunk.js",
-    "main.js.map": "/DecisionHelper-app-react/static/js/main.11316a6b.chunk.js.map",
-    "runtime-main.js": "/DecisionHelper-app-react/static/js/runtime-main.c63e43d6.js",
-    "runtime-main.js.map": "/DecisionHelper-app-react/static/js/runtime-main.c63e43d6.js.map",
-    "static/js/2.ef0a82dd.chunk.js": "/DecisionHelper-app-react/static/js/2.ef0a82dd.chunk.js",
-    "static/js/2.ef0a82dd.chunk.js.map": "/DecisionHelper-app-react/static/js/2.ef0a82dd.chunk.js.map",
-    "index.html": "/DecisionHelper-app-react/index.html",
-    "precache-manifest.4b21e2c725750b0712b071898c6fc47a.js": "/DecisionHelper-app-react/precache-manifest.4b21e2c725750b0712b071898c6fc47a.js",
-    "service-worker.js": "/DecisionHelper-app-react/service-worker.js",
-    "static/css/main.fe703652.chunk.css.map": "/DecisionHelper-app-react/static/css/main.fe703652.chunk.css.map"
+    "main.css": "/DecisionHelper-app-react/public/static/css/main.fe703652.chunk.css",
+    "main.js": "/DecisionHelper-app-react/public/static/js/main.00ff2378.chunk.js",
+    "main.js.map": "/DecisionHelper-app-react/public/static/js/main.00ff2378.chunk.js.map",
+    "runtime-main.js": "/DecisionHelper-app-react/public/static/js/runtime-main.dc79345b.js",
+    "runtime-main.js.map": "/DecisionHelper-app-react/public/static/js/runtime-main.dc79345b.js.map",
+    "static/js/2.ef0a82dd.chunk.js": "/DecisionHelper-app-react/public/static/js/2.ef0a82dd.chunk.js",
+    "static/js/2.ef0a82dd.chunk.js.map": "/DecisionHelper-app-react/public/static/js/2.ef0a82dd.chunk.js.map",
+    "index.html": "/DecisionHelper-app-react/public/index.html",
+    "precache-manifest.7bf677c5791dc4e13aa5dcaf57a021fa.js": "/DecisionHelper-app-react/public/precache-manifest.7bf677c5791dc4e13aa5dcaf57a021fa.js",
+    "service-worker.js": "/DecisionHelper-app-react/public/service-worker.js",
+    "static/css/main.fe703652.chunk.css.map": "/DecisionHelper-app-react/public/static/css/main.fe703652.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c63e43d6.js",
+    "static/js/runtime-main.dc79345b.js",
     "static/js/2.ef0a82dd.chunk.js",
     "static/css/main.fe703652.chunk.css",
-    "static/js/main.11316a6b.chunk.js"
+    "static/js/main.00ff2378.chunk.js"
   ]
 }

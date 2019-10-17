@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/DecisionHelper-app-react/static/css/main.fe703652.chunk.css",
+    "main.js": "/DecisionHelper-app-react/static/js/main.11316a6b.chunk.js",
+    "main.js.map": "/DecisionHelper-app-react/static/js/main.11316a6b.chunk.js.map",
+    "runtime-main.js": "/DecisionHelper-app-react/static/js/runtime-main.c63e43d6.js",
+    "runtime-main.js.map": "/DecisionHelper-app-react/static/js/runtime-main.c63e43d6.js.map",
+    "static/js/2.ef0a82dd.chunk.js": "/DecisionHelper-app-react/static/js/2.ef0a82dd.chunk.js",
+    "static/js/2.ef0a82dd.chunk.js.map": "/DecisionHelper-app-react/static/js/2.ef0a82dd.chunk.js.map",
+    "index.html": "/DecisionHelper-app-react/index.html",
+    "precache-manifest.4b21e2c725750b0712b071898c6fc47a.js": "/DecisionHelper-app-react/precache-manifest.4b21e2c725750b0712b071898c6fc47a.js",
+    "service-worker.js": "/DecisionHelper-app-react/service-worker.js",
+    "static/css/main.fe703652.chunk.css.map": "/DecisionHelper-app-react/static/css/main.fe703652.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c63e43d6.js",
+    "static/js/2.ef0a82dd.chunk.js",
+    "static/css/main.fe703652.chunk.css",
+    "static/js/main.11316a6b.chunk.js"
+  ]
+}

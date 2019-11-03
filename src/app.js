@@ -11,7 +11,8 @@ class App extends React.Component {
   state = {
     options: [],
     selectedOption: undefined,
-    filteredOptions: []
+    filteredOptions: [],
+    error: undefined
   };
 
   handleFilterOptions = (e) => {
@@ -43,14 +44,22 @@ class App extends React.Component {
     this.setState(() => ({ selectedOption: option }));
   }
 
-  handleAddOption = (option) => {
+  handleAddOption = (e) => {
+    e.preventDefault();
+    const option = e.target.option.value.trim();
+    e.target.option.focus();
+
     if (!option) {
-      return 'You need to provide an option'
+      return this.setState(() => ({error: 'You need to provide an option'}));
     } else if (this.state.options.indexOf(option) > -1) {
-      return 'This option already exists'
+      return this.setState(() => ({error: 'This option already exists'}));
     }
 
-    this.setState((prevState) => ({ options: prevState.options.concat([option]) }));
+    this.setState((prevState) => ({ options: prevState.options.concat([option]), error: undefined }));
+
+    if (!this.state.error) {
+      e.target.option.value = '';
+    }
   }
 
   componentDidMount() {
@@ -84,7 +93,7 @@ class App extends React.Component {
           <SearchOption handleFilterOptions={this.handleFilterOptions} />
           <div className="widget">
             <Options handleDeleteOption={this.handleDeleteOption} handleDeleteOptions={this.handleDeleteOptions} options={this.state.options} filteredOptions={this.state.filteredOptions} />
-            <AddOption handleAddOption={this.handleAddOption} />
+            <AddOption error={this.state.error} handleAddOption={this.handleAddOption} />
           </div>
         </div>
         <OptionModal selectedOption={this.state.selectedOption} handleClearOption={this.handleClearOption} />

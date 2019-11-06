@@ -65,8 +65,10 @@ class App extends React.Component {
   handleEditOption = (optionToEdit, newText) => {
     let optionIndex = this.state.options.findIndex((option) => option === optionToEdit);
     let copyState = [...this.state.options];
-    copyState.splice(optionIndex, 1, newText);
+    copyState[optionIndex] = newText;
     this.setState({options: copyState});
+    console.log(copyState);
+    console.log(this.state.options);
   } 
 
   componentDidMount() {
@@ -82,11 +84,9 @@ class App extends React.Component {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.options.length !== this.state.options.length) {
+  componentDidUpdate() {
       const json = JSON.stringify(this.state.options);
       localStorage.setItem('options', json);
-    }
   }
 
   render() {

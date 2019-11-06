@@ -62,6 +62,13 @@ class App extends React.Component {
     }
   }
 
+  handleEditOption = (optionToEdit, newText) => {
+    let optionIndex = this.state.options.findIndex((option) => option === optionToEdit);
+    let copyState = [...this.state.options];
+    copyState.splice(optionIndex, 1, newText);
+    this.setState({options: copyState});
+  } 
+
   componentDidMount() {
     try {
       const json = localStorage.getItem('options');
@@ -92,7 +99,7 @@ class App extends React.Component {
           <Action handlePick={this.handlePick} hasOptions={this.state.options.length > 0} />
           <SearchOption handleFilterOptions={this.handleFilterOptions} />
           <div className="widget">
-            <Options handleDeleteOption={this.handleDeleteOption} handleDeleteOptions={this.handleDeleteOptions} options={this.state.options} filteredOptions={this.state.filteredOptions} />
+            <Options handleEditOption={this.handleEditOption} handleDeleteOption={this.handleDeleteOption} handleDeleteOptions={this.handleDeleteOptions} options={this.state.options} filteredOptions={this.state.filteredOptions} />
             <AddOption error={this.state.error} handleAddOption={this.handleAddOption} />
           </div>
         </div>
